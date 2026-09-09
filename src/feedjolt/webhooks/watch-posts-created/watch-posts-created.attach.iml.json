@@ -1,0 +1,22 @@
+// POST /workspaces/{slug}/webhooks  body: { url: webhook.url, events: [post.created] }
+{
+	"url": "/workspaces/{{parameters.workspaceSlug}}/webhooks",
+	"method": "POST",
+	"body": {
+		"url": "{{webhook.url}}",
+		"events": [
+			"post.created"
+		]
+	},
+	"response": {
+		"data": {
+			"id": "{{body.id}}",
+			"secret": "{{body.secret}}"
+		}
+	},
+	"log": {
+		"sanitize": [
+			"response.body.secret"
+		]
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"url": "/workspaces/{{parameters.workspaceSlug}}/statuses",
+	"method": "GET",
+	"response": {
+		"limit": 500,
+		"iterate": "{{body}}",
+		"output": {
+			"label": "{{item.name}}",
+			"value": "{{item.id}}"
+		}
+	}
+}

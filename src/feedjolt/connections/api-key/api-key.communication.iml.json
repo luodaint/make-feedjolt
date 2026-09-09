@@ -1,0 +1,23 @@
+// Validates the key with GET /api/v1/workspaces (absolute URL; connection does not inherit Base).
+{
+	"url": "https://api.feedjolt.com/api/v1/workspaces",
+	"method": "GET",
+	"headers": {
+		"authorization": "Bearer {{parameters.apiKey}}"
+	},
+	"response": {
+		"valid": "{{statusCode === 200}}",
+		"metadata": {
+			"type": "text",
+			"value": "{{ifempty(body.1.name, 'Feedjolt')}}"
+		},
+		"error": {
+			"message": "[{{statusCode}}] Invalid Feedjolt API key or the key cannot list workspaces. {{ifempty(body.detail, body.message)}}"
+		}
+	},
+	"log": {
+		"sanitize": [
+			"request.headers.authorization"
+		]
+	}
+}

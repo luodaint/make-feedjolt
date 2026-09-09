@@ -1,0 +1,17 @@
+{
+	"url": "/workspaces/{{parameters.workspaceSlug}}/boards",
+	"method": "POST",
+	"response": {
+		"output": "{{body}}"
+	},
+	"body": {
+		"title": "{{parameters.title}}",
+		"slug": "{{parameters.slug}}",
+		"description": "{{parameters.description}}",
+		"icon": "{{parameters.icon}}",
+		"visibility": "{{parameters.visibility}}",
+		"votes_enabled": "{{parameters.votesEnabled}}",
+		"moderation_enabled": "{{parameters.moderationEnabled}}",
+		"notify_admins_on_new_post": "{{parameters.notifyAdminsOnNewPost}}"
+	}
+}

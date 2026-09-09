@@ -1,0 +1,17 @@
+{
+	"id": "brd_01EXAMPLE",
+	"workspace_id": "wks_01EXAMPLE",
+	"title": "Feature requests",
+	"description": "Public ideas from customers",
+	"slug": "feature-requests",
+	"icon": null,
+	"visibility": "PUBLIC",
+	"votes_enabled": true,
+	"moderation_enabled": false,
+	"notify_admins_on_new_post": true,
+	"pinned_post_id": null,
+	"archived": false,
+	"sort_order": 0,
+	"created_at": "2026-08-01T12:00:00.000Z",
+	"updated_at": "2026-08-01T12:00:00.000Z"
+}

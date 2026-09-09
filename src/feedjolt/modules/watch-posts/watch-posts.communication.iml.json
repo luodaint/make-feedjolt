@@ -1,0 +1,21 @@
+{
+	"url": "/workspaces/{{parameters.workspaceSlug}}/posts",
+	"method": "GET",
+	"qs": {
+		"sort_by": "newest",
+		"page_size": "{{parameters.limit}}",
+		"board_id": "{{parameters.boardId}}",
+		"status_id": "{{parameters.statusId}}"
+	},
+	"response": {
+		"limit": "{{parameters.limit}}",
+		"iterate": "{{body.posts}}",
+		"output": "{{item}}",
+		"trigger": {
+			"id": "{{item.id}}",
+			"date": "{{item.created_at}}",
+			"type": "date",
+			"order": "desc"
+		}
+	}
+}

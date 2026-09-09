@@ -1,0 +1,9 @@
+{
+	"url": "/workspaces/{{parameters.workspaceSlug}}/posts/{{parameters.postId}}",
+	"method": "DELETE",
+	"response": {
+		"output": {
+			"id": "{{parameters.postId}}"
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"url": "/workspaces/{{parameters.workspaceSlug}}/boards/{{parameters.boardSlug}}/posts",
+	"method": "POST",
+	"response": {
+		"output": "{{body}}"
+	},
+	"body": {
+		"title": "{{parameters.title}}",
+		"body": "{{parameters.body}}",
+		"status_id": "{{parameters.statusId}}",
+		"is_draft": "{{parameters.isDraft}}",
+		"is_internal": "{{parameters.isInternal}}",
+		"eta": "{{parameters.eta}}",
+		"version_id": "{{parameters.versionId}}"
+	}
+}

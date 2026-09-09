@@ -1,0 +1,16 @@
+{
+	"id": "wks_01EXAMPLE",
+	"name": "Acme",
+	"slug": "acme",
+	"logo_url": null,
+	"favicon_url": null,
+	"settings": {},
+	"data_region": "US",
+	"is_active": true,
+	"created_at": "2026-01-15T12:00:00.000Z",
+	"trial_started": false,
+	"email_intake_enabled": false,
+	"email_intake_default_board_id": null,
+	"email_intake_allowed_domains": [],
+	"email_intake_address": null
+}

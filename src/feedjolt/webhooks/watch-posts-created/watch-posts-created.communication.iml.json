@@ -1,0 +1,12 @@
+// Incoming Feedjolt delivery. TODO: confirm post.created envelope vs body.post.
+{
+	"condition": "{{if(headers['x-feedjolt-event'], headers['x-feedjolt-event'] = 'post.created', true)}}",
+	"output": "{{if(body.post, body.post, body)}}",
+	"respond": {
+		"status": 200,
+		"type": "json",
+		"body": {
+			"ok": true
+		}
+	}
+}

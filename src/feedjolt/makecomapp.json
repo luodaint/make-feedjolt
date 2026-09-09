@@ -1,0 +1,290 @@
+{
+	"fileVersion": 1,
+	"generalCodeFiles": {
+		"base": "base/base.iml.json",
+		"common": null,
+		"groups": "groups/groups.json",
+		"readme": "README.md"
+	},
+	"components": {
+		"connection": {
+			"apiKey": {
+				"label": "Feedjolt API Key",
+				"connectionType": "basic",
+				"codeFiles": {
+					"communication": "connections/api-key/api-key.communication.iml.json",
+					"params": "connections/api-key/api-key.params.iml.json",
+					"common": null
+				}
+			}
+		},
+		"endpoint": {},
+		"function": {},
+		"module": {
+			"watchPosts": {
+				"label": "Watch Posts",
+				"description": "Triggers when a new post is created in a Feedjolt workspace (polling).",
+				"moduleType": "trigger",
+				"connection": "apiKey",
+				"codeFiles": {
+					"communication": "modules/watch-posts/watch-posts.communication.iml.json",
+					"staticParams": "modules/watch-posts/watch-posts.static-params.iml.json",
+					"mappableParams": "modules/watch-posts/watch-posts.mappable-params.iml.json",
+					"interface": "modules/watch-posts/watch-posts.interface.iml.json",
+					"samples": "modules/watch-posts/watch-posts.samples.iml.json",
+					"scope": "modules/watch-posts/watch-posts.scope.iml.json",
+					"epoch": "modules/watch-posts/watch-posts.epoch.iml.json"
+				}
+			},
+			"watchPostsInstant": {
+				"label": "Watch Posts (Instant)",
+				"description": "Triggers immediately when Feedjolt delivers a `post.created` webhook.",
+				"moduleType": "instant_trigger",
+				"connection": "apiKey",
+				"codeFiles": {
+					"communication": "modules/watch-posts-instant/watch-posts-instant.communication.iml.json",
+					"staticParams": "modules/watch-posts-instant/watch-posts-instant.static-params.iml.json",
+					"mappableParams": "modules/watch-posts-instant/watch-posts-instant.mappable-params.iml.json",
+					"interface": "modules/watch-posts-instant/watch-posts-instant.interface.iml.json",
+					"samples": "modules/watch-posts-instant/watch-posts-instant.samples.iml.json",
+					"scope": "modules/watch-posts-instant/watch-posts-instant.scope.iml.json"
+				},
+				"webhook": "watchPostsCreated"
+			},
+			"createPost": {
+				"label": "Create a Post",
+				"description": "Creates a post on a Feedjolt board.",
+				"moduleType": "action",
+				"connection": "apiKey",
+				"codeFiles": {
+					"communication": "modules/create-post/create-post.communication.iml.json",
+					"staticParams": "modules/create-post/create-post.static-params.iml.json",
+					"mappableParams": "modules/create-post/create-post.mappable-params.iml.json",
+					"interface": "modules/create-post/create-post.interface.iml.json",
+					"samples": "modules/create-post/create-post.samples.iml.json",
+					"scope": "modules/create-post/create-post.scope.iml.json"
+				},
+				"actionCrud": "create"
+			},
+			"getPost": {
+				"label": "Get a Post",
+				"description": "Retrieves a single Feedjolt post by ID.",
+				"moduleType": "action",
+				"connection": "apiKey",
+				"codeFiles": {
+					"communication": "modules/get-post/get-post.communication.iml.json",
+					"staticParams": "modules/get-post/get-post.static-params.iml.json",
+					"mappableParams": "modules/get-post/get-post.mappable-params.iml.json",
+					"interface": "modules/get-post/get-post.interface.iml.json",
+					"samples": "modules/get-post/get-post.samples.iml.json",
+					"scope": "modules/get-post/get-post.scope.iml.json"
+				},
+				"actionCrud": "read"
+			},
+			"updatePost": {
+				"label": "Update a Post",
+				"description": "Updates title, body, internal flag, ETA, or version on a post (`PATCH`).",
+				"moduleType": "action",
+				"connection": "apiKey",
+				"codeFiles": {
+					"communication": "modules/update-post/update-post.communication.iml.json",
+					"staticParams": "modules/update-post/update-post.static-params.iml.json",
+					"mappableParams": "modules/update-post/update-post.mappable-params.iml.json",
+					"interface": "modules/update-post/update-post.interface.iml.json",
+					"samples": "modules/update-post/update-post.samples.iml.json",
+					"scope": "modules/update-post/update-post.scope.iml.json"
+				},
+				"actionCrud": "update"
+			},
+			"updatePostStatus": {
+				"label": "Update a Post Status",
+				"description": "Changes a post's status (`PUT /posts/{post_id}/status`).",
+				"moduleType": "action",
+				"connection": "apiKey",
+				"codeFiles": {
+					"communication": "modules/update-post-status/update-post-status.communication.iml.json",
+					"staticParams": "modules/update-post-status/update-post-status.static-params.iml.json",
+					"mappableParams": "modules/update-post-status/update-post-status.mappable-params.iml.json",
+					"interface": "modules/update-post-status/update-post-status.interface.iml.json",
+					"samples": "modules/update-post-status/update-post-status.samples.iml.json",
+					"scope": "modules/update-post-status/update-post-status.scope.iml.json"
+				},
+				"actionCrud": "update"
+			},
+			"deletePost": {
+				"label": "Delete a Post",
+				"description": "Deletes a Feedjolt post. API returns HTTP 204.",
+				"moduleType": "action",
+				"connection": "apiKey",
+				"codeFiles": {
+					"communication": "modules/delete-post/delete-post.communication.iml.json",
+					"staticParams": "modules/delete-post/delete-post.static-params.iml.json",
+					"mappableParams": "modules/delete-post/delete-post.mappable-params.iml.json",
+					"interface": "modules/delete-post/delete-post.interface.iml.json",
+					"samples": "modules/delete-post/delete-post.samples.iml.json",
+					"scope": "modules/delete-post/delete-post.scope.iml.json"
+				},
+				"actionCrud": "delete"
+			},
+			"searchPosts": {
+				"label": "Search Posts",
+				"description": "Searches posts in a workspace (`GET /posts/search?q=`).",
+				"moduleType": "search",
+				"connection": "apiKey",
+				"codeFiles": {
+					"communication": "modules/search-posts/search-posts.communication.iml.json",
+					"staticParams": "modules/search-posts/search-posts.static-params.iml.json",
+					"mappableParams": "modules/search-posts/search-posts.mappable-params.iml.json",
+					"interface": "modules/search-posts/search-posts.interface.iml.json",
+					"samples": "modules/search-posts/search-posts.samples.iml.json",
+					"scope": "modules/search-posts/search-posts.scope.iml.json"
+				}
+			},
+			"listBoards": {
+				"label": "List Boards",
+				"description": "Lists boards in a Feedjolt workspace.",
+				"moduleType": "search",
+				"connection": "apiKey",
+				"codeFiles": {
+					"communication": "modules/list-boards/list-boards.communication.iml.json",
+					"staticParams": "modules/list-boards/list-boards.static-params.iml.json",
+					"mappableParams": "modules/list-boards/list-boards.mappable-params.iml.json",
+					"interface": "modules/list-boards/list-boards.interface.iml.json",
+					"samples": "modules/list-boards/list-boards.samples.iml.json",
+					"scope": "modules/list-boards/list-boards.scope.iml.json"
+				}
+			},
+			"getBoard": {
+				"label": "Get a Board",
+				"description": "Retrieves a board by slug.",
+				"moduleType": "action",
+				"connection": "apiKey",
+				"codeFiles": {
+					"communication": "modules/get-board/get-board.communication.iml.json",
+					"staticParams": "modules/get-board/get-board.static-params.iml.json",
+					"mappableParams": "modules/get-board/get-board.mappable-params.iml.json",
+					"interface": "modules/get-board/get-board.interface.iml.json",
+					"samples": "modules/get-board/get-board.samples.iml.json",
+					"scope": "modules/get-board/get-board.scope.iml.json"
+				},
+				"actionCrud": "read"
+			},
+			"createBoard": {
+				"label": "Create a Board",
+				"description": "Creates a board in a Feedjolt workspace.",
+				"moduleType": "action",
+				"connection": "apiKey",
+				"codeFiles": {
+					"communication": "modules/create-board/create-board.communication.iml.json",
+					"staticParams": "modules/create-board/create-board.static-params.iml.json",
+					"mappableParams": "modules/create-board/create-board.mappable-params.iml.json",
+					"interface": "modules/create-board/create-board.interface.iml.json",
+					"samples": "modules/create-board/create-board.samples.iml.json",
+					"scope": "modules/create-board/create-board.scope.iml.json"
+				},
+				"actionCrud": "create"
+			},
+			"listWorkspaces": {
+				"label": "List Workspaces",
+				"description": "Lists workspaces the API key can access (`GET /workspaces`).",
+				"moduleType": "search",
+				"connection": "apiKey",
+				"codeFiles": {
+					"communication": "modules/list-workspaces/list-workspaces.communication.iml.json",
+					"staticParams": "modules/list-workspaces/list-workspaces.static-params.iml.json",
+					"mappableParams": "modules/list-workspaces/list-workspaces.mappable-params.iml.json",
+					"interface": "modules/list-workspaces/list-workspaces.interface.iml.json",
+					"samples": "modules/list-workspaces/list-workspaces.samples.iml.json",
+					"scope": "modules/list-workspaces/list-workspaces.scope.iml.json"
+				}
+			},
+			"getWorkspace": {
+				"label": "Get a Workspace",
+				"description": "Retrieves a workspace by slug.",
+				"moduleType": "action",
+				"connection": "apiKey",
+				"codeFiles": {
+					"communication": "modules/get-workspace/get-workspace.communication.iml.json",
+					"staticParams": "modules/get-workspace/get-workspace.static-params.iml.json",
+					"mappableParams": "modules/get-workspace/get-workspace.mappable-params.iml.json",
+					"interface": "modules/get-workspace/get-workspace.interface.iml.json",
+					"samples": "modules/get-workspace/get-workspace.samples.iml.json",
+					"scope": "modules/get-workspace/get-workspace.scope.iml.json"
+				},
+				"actionCrud": "read"
+			},
+			"makeApiCall": {
+				"label": "Make an API Call",
+				"description": "Performs an arbitrary authorized API call.",
+				"moduleType": "universal",
+				"connection": "apiKey",
+				"codeFiles": {
+					"communication": "modules/make-api-call/make-api-call.communication.iml.json",
+					"staticParams": "modules/make-api-call/make-api-call.static-params.iml.json",
+					"mappableParams": "modules/make-api-call/make-api-call.mappable-params.iml.json",
+					"interface": "modules/make-api-call/make-api-call.interface.iml.json",
+					"samples": "modules/make-api-call/make-api-call.samples.iml.json",
+					"scope": "modules/make-api-call/make-api-call.scope.iml.json"
+				}
+			}
+		},
+		"rpc": {
+			"listWorkspaces": {
+				"label": "List workspaces",
+				"connection": "apiKey",
+				"codeFiles": {
+					"communication": "rpcs/list-workspaces/list-workspaces.communication.iml.json",
+					"params": "rpcs/list-workspaces/list-workspaces.params.iml.json"
+				}
+			},
+			"listBoards": {
+				"label": "List boards",
+				"connection": "apiKey",
+				"codeFiles": {
+					"communication": "rpcs/list-boards/list-boards.communication.iml.json",
+					"params": "rpcs/list-boards/list-boards.params.iml.json"
+				}
+			},
+			"listStatuses": {
+				"label": "List statuses",
+				"connection": "apiKey",
+				"codeFiles": {
+					"communication": "rpcs/list-statuses/list-statuses.communication.iml.json",
+					"params": "rpcs/list-statuses/list-statuses.params.iml.json"
+				}
+			}
+		},
+		"webhook": {
+			"watchPostsCreated": {
+				"label": "Watch posts created",
+				"webhookType": "web",
+				"connection": "apiKey",
+				"codeFiles": {
+					"communication": "webhooks/watch-posts-created/watch-posts-created.communication.iml.json",
+					"params": "webhooks/watch-posts-created/watch-posts-created.params.iml.json",
+					"attach": "webhooks/watch-posts-created/watch-posts-created.attach.iml.json",
+					"detach": "webhooks/watch-posts-created/watch-posts-created.detach.iml.json",
+					"update": "webhooks/watch-posts-created/watch-posts-created.update.iml.json",
+					"requiredScope": "webhooks/watch-posts-created/watch-posts-created.required-scope.iml.json"
+				}
+			}
+		}
+	},
+	"origins": [
+		{
+			"label": "Make (set zone after creating the app)",
+			"baseUrl": "https://eu1.make.com/api",
+			"appId": "feedjolt",
+			"appVersion": 1,
+			"apikeyFile": "../../.secrets/apikey",
+			"idMapping": {
+				"connection": [],
+				"endpoint": [],
+				"function": [],
+				"module": [],
+				"rpc": [],
+				"webhook": []
+			}
+		}
+	]
+}

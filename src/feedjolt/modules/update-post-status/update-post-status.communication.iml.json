@@ -1,0 +1,10 @@
+{
+	"url": "/workspaces/{{parameters.workspaceSlug}}/posts/{{parameters.postId}}/status",
+	"method": "PUT",
+	"response": {
+		"output": "{{body}}"
+	},
+	"body": {
+		"status_id": "{{parameters.statusId}}"
+	}
+}

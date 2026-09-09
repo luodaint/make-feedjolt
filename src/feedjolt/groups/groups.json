@@ -1,0 +1,36 @@
+[
+	{
+		"label": "Posts",
+		"modules": [
+			"watchPosts",
+			"watchPostsInstant",
+			"createPost",
+			"getPost",
+			"updatePost",
+			"updatePostStatus",
+			"deletePost",
+			"searchPosts"
+		]
+	},
+	{
+		"label": "Boards",
+		"modules": [
+			"listBoards",
+			"getBoard",
+			"createBoard"
+		]
+	},
+	{
+		"label": "Workspaces",
+		"modules": [
+			"listWorkspaces",
+			"getWorkspace"
+		]
+	},
+	{
+		"label": "Other",
+		"modules": [
+			"makeApiCall"
+		]
+	}
+]

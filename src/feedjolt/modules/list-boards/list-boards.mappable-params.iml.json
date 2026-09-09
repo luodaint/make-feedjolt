@@ -1,0 +1,18 @@
+[
+	{
+		"name": "workspaceSlug",
+		"type": "select",
+		"label": "Workspace",
+		"help": "Workspace slug. Loaded from `GET /workspaces`.",
+		"required": true,
+		"options": "rpc://listWorkspaces"
+	},
+	{
+		"name": "limit",
+		"type": "uinteger",
+		"label": "Limit",
+		"help": "Maximum number of results Make will work with during one execution cycle.",
+		"required": true,
+		"default": 10
+	}
+]

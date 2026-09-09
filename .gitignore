@@ -1,2 +1,8 @@
-src/
+# Make Apps SDK stores zone API tokens here (never commit).
+.secrets/
 .secrets
+
+# Local OS / editor
+.DS_Store
+.vscode/
+*.swp
