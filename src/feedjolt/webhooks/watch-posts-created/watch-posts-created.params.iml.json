@@ -1,0 +1,11 @@
+// Collected when the user creates the webhook in Watch Posts (Instant).
+[
+	{
+		"name": "workspaceSlug",
+		"type": "select",
+		"label": "Workspace",
+		"help": "Workspace that will register the `post.created` webhook via `POST /workspaces/{workspace_slug}/webhooks`.",
+		"required": true,
+		"options": "rpc://listWorkspaces"
+	}
+]

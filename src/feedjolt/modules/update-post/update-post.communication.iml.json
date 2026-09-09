@@ -1,0 +1,14 @@
+{
+	"url": "/workspaces/{{parameters.workspaceSlug}}/posts/{{parameters.postId}}",
+	"method": "PATCH",
+	"response": {
+		"output": "{{body}}"
+	},
+	"body": {
+		"title": "{{parameters.title}}",
+		"body": "{{parameters.body}}",
+		"is_internal": "{{parameters.isInternal}}",
+		"eta": "{{parameters.eta}}",
+		"version_id": "{{parameters.versionId}}"
+	}
+}

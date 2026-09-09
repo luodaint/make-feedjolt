@@ -1,0 +1,12 @@
+{
+	"url": "/workspaces/{{parameters.workspaceSlug}}/posts/search",
+	"method": "GET",
+	"qs": {
+		"q": "{{parameters.q}}"
+	},
+	"response": {
+		"iterate": "{{body}}",
+		"output": "{{item}}",
+		"limit": "{{parameters.limit}}"
+	}
+}

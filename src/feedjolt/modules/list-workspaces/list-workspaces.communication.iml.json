@@ -1,0 +1,9 @@
+{
+	"url": "/workspaces",
+	"method": "GET",
+	"response": {
+		"iterate": "{{body}}",
+		"output": "{{item}}",
+		"limit": "{{parameters.limit}}"
+	}
+}

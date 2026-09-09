@@ -1,0 +1,8 @@
+[
+	{
+		"name": "workspaceSlug",
+		"type": "text",
+		"label": "Workspace",
+		"required": true
+	}
+]

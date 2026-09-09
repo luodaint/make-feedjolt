@@ -1,0 +1,16 @@
+{
+	"response": {
+		"limit": 500,
+		"output": {
+			"date": "{{item.created_at}}",
+			"label": "{{item.title}}"
+		},
+		"iterate": "{{body.posts}}"
+	},
+	"url": "/workspaces/{{parameters.workspaceSlug}}/posts",
+	"method": "GET",
+	"qs": {
+		"sort_by": "newest",
+		"page_size": 50
+	}
+}

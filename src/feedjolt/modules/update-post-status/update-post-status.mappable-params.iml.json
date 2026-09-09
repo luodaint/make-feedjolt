@@ -1,0 +1,31 @@
+[
+	{
+		"name": "workspaceSlug",
+		"type": "select",
+		"label": "Workspace",
+		"help": "Workspace slug. Loaded from `GET /workspaces`.",
+		"required": true,
+		"options": {
+			"store": "rpc://listWorkspaces",
+			"nested": [
+				{
+					"name": "statusId",
+					"type": "select",
+					"label": "Status",
+					"help": "Status ID. Loaded from `GET /workspaces/{workspace_slug}/statuses`.",
+					"required": true,
+					"options": "rpc://listStatuses",
+					"mappable": false
+				}
+			]
+		}
+	},
+	{
+		"name": "postId",
+		"type": "text",
+		"label": "Post ID",
+		"help": "Feedjolt post ID.",
+		"required": true,
+		"mode": "edit"
+	}
+]

@@ -1,0 +1,189 @@
+[
+	{
+		"name": "id",
+		"type": "text",
+		"label": "Post ID"
+	},
+	{
+		"name": "workspace_id",
+		"type": "text",
+		"label": "Workspace ID"
+	},
+	{
+		"name": "board_id",
+		"type": "text",
+		"label": "Board ID"
+	},
+	{
+		"name": "author_type",
+		"type": "text",
+		"label": "Author Type"
+	},
+	{
+		"name": "author_id",
+		"type": "text",
+		"label": "Author ID"
+	},
+	{
+		"name": "title",
+		"type": "text",
+		"label": "Title"
+	},
+	{
+		"name": "body",
+		"type": "text",
+		"label": "Body"
+	},
+	{
+		"name": "status_id",
+		"type": "text",
+		"label": "Status ID"
+	},
+	{
+		"name": "owner_admin_id",
+		"type": "text",
+		"label": "Owner Admin ID"
+	},
+	{
+		"name": "is_draft",
+		"type": "boolean",
+		"label": "Is Draft"
+	},
+	{
+		"name": "is_internal",
+		"type": "boolean",
+		"label": "Is Internal"
+	},
+	{
+		"name": "eta",
+		"type": "text",
+		"label": "ETA"
+	},
+	{
+		"name": "vote_count",
+		"type": "integer",
+		"label": "Vote Count"
+	},
+	{
+		"name": "weighted_score",
+		"type": "number",
+		"label": "Weighted Score"
+	},
+	{
+		"name": "comment_count",
+		"type": "integer",
+		"label": "Comment Count"
+	},
+	{
+		"name": "is_spam",
+		"type": "boolean",
+		"label": "Is Spam"
+	},
+	{
+		"name": "is_incognito",
+		"type": "boolean",
+		"label": "Is Incognito"
+	},
+	{
+		"name": "merged_into_id",
+		"type": "text",
+		"label": "Merged Into ID"
+	},
+	{
+		"name": "created_at",
+		"type": "date",
+		"label": "Created At"
+	},
+	{
+		"name": "updated_at",
+		"type": "date",
+		"label": "Updated At"
+	},
+	{
+		"name": "tags",
+		"type": "array",
+		"label": "Tags",
+		"spec": {
+			"type": "collection",
+			"spec": [
+				{
+					"name": "id",
+					"type": "text",
+					"label": "Tag ID"
+				},
+				{
+					"name": "name",
+					"type": "text",
+					"label": "Name"
+				}
+			]
+		}
+	},
+	{
+		"name": "author_name",
+		"type": "text",
+		"label": "Author Name"
+	},
+	{
+		"name": "author_email",
+		"type": "email",
+		"label": "Author Email"
+	},
+	{
+		"name": "author_avatar_url",
+		"type": "url",
+		"label": "Author Avatar URL"
+	},
+	{
+		"name": "owner_name",
+		"type": "text",
+		"label": "Owner Name"
+	},
+	{
+		"name": "owner_email",
+		"type": "email",
+		"label": "Owner Email"
+	},
+	{
+		"name": "owner_avatar_url",
+		"type": "url",
+		"label": "Owner Avatar URL"
+	},
+	{
+		"name": "version_id",
+		"type": "text",
+		"label": "Version ID"
+	},
+	{
+		"name": "version",
+		"type": "collection",
+		"label": "Version",
+		"spec": [
+			{
+				"name": "id",
+				"type": "text",
+				"label": "ID"
+			},
+			{
+				"name": "name",
+				"type": "text",
+				"label": "Name"
+			}
+		]
+	},
+	{
+		"name": "sentiment",
+		"type": "text",
+		"label": "Sentiment"
+	},
+	{
+		"name": "sentiment_confidence",
+		"type": "number",
+		"label": "Sentiment Confidence"
+	},
+	{
+		"name": "has_linear_issue",
+		"type": "boolean",
+		"label": "Has Linear Issue"
+	}
+]

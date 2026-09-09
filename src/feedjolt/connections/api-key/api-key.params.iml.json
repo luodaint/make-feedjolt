@@ -1,0 +1,11 @@
+// Connection parameters shown when the user creates a Feedjolt connection.
+[
+	{
+		"name": "apiKey",
+		"type": "password",
+		"label": "API Key",
+		"help": "Workspace API key from Feedjolt (starts with `fjk_`). Sent as `Authorization: Bearer`.",
+		"required": true,
+		"editable": true
+	}
+]

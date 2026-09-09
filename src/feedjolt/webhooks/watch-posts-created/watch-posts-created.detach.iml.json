@@ -1,0 +1,5 @@
+// DELETE /workspaces/{slug}/webhooks/{id} — id comes from attach response.data
+{
+	"url": "/workspaces/{{parameters.workspaceSlug}}/webhooks/{{webhook.id}}",
+	"method": "DELETE"
+}

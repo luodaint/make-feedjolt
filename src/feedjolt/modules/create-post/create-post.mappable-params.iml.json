@@ -1,0 +1,66 @@
+[
+	{
+		"name": "workspaceSlug",
+		"type": "select",
+		"label": "Workspace",
+		"help": "Workspace slug. Loaded from `GET /workspaces`.",
+		"required": true,
+		"options": {
+			"store": "rpc://listWorkspaces",
+			"nested": [
+				{
+					"name": "boardSlug",
+					"type": "select",
+					"label": "Board",
+					"help": "Board slug. Nested under workspace; loaded from `GET /workspaces/{workspace_slug}/boards`.",
+					"required": true,
+					"options": "rpc://listBoards",
+					"mappable": false
+				},
+				{
+					"name": "statusId",
+					"type": "select",
+					"label": "Status",
+					"help": "Status ID. Loaded from `GET /workspaces/{workspace_slug}/statuses`.",
+					"required": false,
+					"options": "rpc://listStatuses",
+					"mappable": false
+				}
+			]
+		}
+	},
+	{
+		"name": "title",
+		"type": "text",
+		"label": "Title",
+		"help": "Required. Max 500 characters (Feedjolt PostCreate.title).",
+		"required": true
+	},
+	{
+		"name": "body",
+		"type": "text",
+		"label": "Body"
+	},
+	{
+		"name": "isDraft",
+		"type": "boolean",
+		"label": "Draft",
+		"default": false
+	},
+	{
+		"name": "isInternal",
+		"type": "boolean",
+		"label": "Internal",
+		"default": false
+	},
+	{
+		"name": "eta",
+		"type": "text",
+		"label": "ETA"
+	},
+	{
+		"name": "versionId",
+		"type": "text",
+		"label": "Version ID"
+	}
+]

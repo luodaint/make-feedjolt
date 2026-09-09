@@ -1,0 +1,77 @@
+[
+	{
+		"name": "workspaceSlug",
+		"type": "select",
+		"label": "Workspace",
+		"help": "Workspace slug. Loaded from `GET /workspaces`.",
+		"required": true,
+		"options": "rpc://listWorkspaces"
+	},
+	{
+		"name": "title",
+		"type": "text",
+		"label": "Title",
+		"help": "Required. Max 255 characters (Feedjolt BoardCreate.title).",
+		"required": true
+	},
+	{
+		"name": "slug",
+		"type": "text",
+		"label": "Slug",
+		"help": "Lowercase letters, numbers, and hyphens (`^[a-z0-9-]+$`). Max 100 characters.",
+		"required": true
+	},
+	{
+		"name": "description",
+		"type": "text",
+		"label": "Description"
+	},
+	{
+		"name": "icon",
+		"type": "text",
+		"label": "Icon",
+		"help": "Optional. Max 32 characters."
+	},
+	{
+		"name": "visibility",
+		"type": "select",
+		"label": "Visibility",
+		"default": "PUBLIC",
+		"options": [
+			{
+				"label": "Public",
+				"value": "PUBLIC"
+			},
+			{
+				"label": "Authenticated",
+				"value": "AUTHENTICATED"
+			},
+			{
+				"label": "Invite only",
+				"value": "INVITE_ONLY"
+			},
+			{
+				"label": "Internal",
+				"value": "INTERNAL"
+			}
+		]
+	},
+	{
+		"name": "votesEnabled",
+		"type": "boolean",
+		"label": "Votes Enabled",
+		"default": true
+	},
+	{
+		"name": "moderationEnabled",
+		"type": "boolean",
+		"label": "Moderation Enabled",
+		"default": false
+	},
+	{
+		"name": "notifyAdminsOnNewPost",
+		"type": "boolean",
+		"label": "Notify Admins On New Post",
+		"default": true
+	}
+]

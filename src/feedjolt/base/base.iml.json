@@ -1,0 +1,55 @@
+// Inherited by modules, RPCs, and webhook attach/detach.
+// Auth header uses connection.apiKey from the basic API-key connection.
+{
+	"baseUrl": "https://api.feedjolt.com/api/v1",
+	"headers": {
+		"authorization": "Bearer {{connection.apiKey}}",
+		"accept": "application/json"
+	},
+	"response": {
+		"error": {
+			"401": {
+				"type": "InvalidAccessTokenError",
+				"message": "[401] Unauthorized. Check the Feedjolt workspace API key (fjk_…). {{ifempty(body.detail, body.message)}}"
+			},
+			"403": {
+				"type": "RuntimeError",
+				"message": "[403] Forbidden. This API key cannot access this workspace. {{ifempty(body.detail, body.message)}}"
+			},
+			"404": {
+				"type": "DataError",
+				"message": "[404] Not found. {{ifempty(body.detail, body.message)}}"
+			},
+			"422": {
+				"type": "DataError",
+				"message": "[422] Validation error. {{ifempty(body.detail, body.message)}}"
+			},
+			"429": {
+				"type": "RateLimitError",
+				"message": "[429] Rate limited by Feedjolt. Retry later. {{ifempty(body.detail, body.message)}}"
+			},
+			"500": {
+				"type": "ConnectionError",
+				"message": "[500] Feedjolt server error. {{ifempty(body.detail, body.message)}}"
+			},
+			"502": {
+				"type": "ConnectionError",
+				"message": "[502] Feedjolt bad gateway. {{ifempty(body.detail, body.message)}}"
+			},
+			"503": {
+				"type": "ConnectionError",
+				"message": "[503] Feedjolt unavailable. {{ifempty(body.detail, body.message)}}"
+			},
+			"504": {
+				"type": "ConnectionError",
+				"message": "[504] Feedjolt gateway timeout. {{ifempty(body.detail, body.message)}}"
+			},
+			"message": "[{{statusCode}}] {{ifempty(ifempty(body.detail, body.message), 'Feedjolt API error')}}"
+		}
+	},
+	"log": {
+		"sanitize": [
+			"request.headers.authorization"
+		]
+	}
+}

@@ -1,0 +1,75 @@
+[
+	{
+		"name": "id",
+		"type": "text",
+		"label": "Workspace ID"
+	},
+	{
+		"name": "name",
+		"type": "text",
+		"label": "Name"
+	},
+	{
+		"name": "slug",
+		"type": "text",
+		"label": "Slug"
+	},
+	{
+		"name": "logo_url",
+		"type": "url",
+		"label": "Logo URL"
+	},
+	{
+		"name": "favicon_url",
+		"type": "url",
+		"label": "Favicon URL"
+	},
+	{
+		"name": "settings",
+		"type": "collection",
+		"label": "Settings"
+	},
+	{
+		"name": "data_region",
+		"type": "text",
+		"label": "Data Region"
+	},
+	{
+		"name": "is_active",
+		"type": "boolean",
+		"label": "Is Active"
+	},
+	{
+		"name": "created_at",
+		"type": "date",
+		"label": "Created At"
+	},
+	{
+		"name": "trial_started",
+		"type": "boolean",
+		"label": "Trial Started"
+	},
+	{
+		"name": "email_intake_enabled",
+		"type": "boolean",
+		"label": "Email Intake Enabled"
+	},
+	{
+		"name": "email_intake_default_board_id",
+		"type": "text",
+		"label": "Email Intake Default Board ID"
+	},
+	{
+		"name": "email_intake_allowed_domains",
+		"type": "array",
+		"label": "Email Intake Allowed Domains",
+		"spec": {
+			"type": "text"
+		}
+	},
+	{
+		"name": "email_intake_address",
+		"type": "email",
+		"label": "Email Intake Address"
+	}
+]

@@ -1,0 +1,10 @@
+[
+	{
+		"name": "workspaceSlug",
+		"type": "select",
+		"label": "Workspace",
+		"help": "Workspace slug. Loaded from `GET /workspaces`.",
+		"required": true,
+		"options": "rpc://listWorkspaces"
+	}
+]

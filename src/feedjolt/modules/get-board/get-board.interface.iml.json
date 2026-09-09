@@ -1,0 +1,77 @@
+[
+	{
+		"name": "id",
+		"type": "text",
+		"label": "Board ID"
+	},
+	{
+		"name": "workspace_id",
+		"type": "text",
+		"label": "Workspace ID"
+	},
+	{
+		"name": "title",
+		"type": "text",
+		"label": "Title"
+	},
+	{
+		"name": "description",
+		"type": "text",
+		"label": "Description"
+	},
+	{
+		"name": "slug",
+		"type": "text",
+		"label": "Slug"
+	},
+	{
+		"name": "icon",
+		"type": "text",
+		"label": "Icon"
+	},
+	{
+		"name": "visibility",
+		"type": "text",
+		"label": "Visibility"
+	},
+	{
+		"name": "votes_enabled",
+		"type": "boolean",
+		"label": "Votes Enabled"
+	},
+	{
+		"name": "moderation_enabled",
+		"type": "boolean",
+		"label": "Moderation Enabled"
+	},
+	{
+		"name": "notify_admins_on_new_post",
+		"type": "boolean",
+		"label": "Notify Admins On New Post"
+	},
+	{
+		"name": "pinned_post_id",
+		"type": "text",
+		"label": "Pinned Post ID"
+	},
+	{
+		"name": "archived",
+		"type": "boolean",
+		"label": "Archived"
+	},
+	{
+		"name": "sort_order",
+		"type": "integer",
+		"label": "Sort Order"
+	},
+	{
+		"name": "created_at",
+		"type": "date",
+		"label": "Created At"
+	},
+	{
+		"name": "updated_at",
+		"type": "date",
+		"label": "Updated At"
+	}
+]
